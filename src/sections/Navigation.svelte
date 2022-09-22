@@ -18,30 +18,30 @@
 </nav>
 
 <style lang="scss">
-  .nav{
-    &--desktop{
-      display: flex;
-    flex-direction: row;
-    }
-    
-  }
-  .nav__main,
-  .nav__users {
+  @mixin flexRow {
     display: flex;
     flex-direction: row;
   }
-  .nav__main {
-    flex-wrap: wrap;
-  }
-    .nav__main > * {
-        margin-right: 2rem;
-    }
-
-  .nav__users {
-    max-width: 10rem;
-    margin-left: auto;
-  }
-  .nav__users > *{
+  @mixin nestedIndent() {
     margin-right: 2rem;
+  }
+
+  .nav {
+    &--desktop {
+      @include flexRow();
+    }
+    &__main {
+      @include flexRow();
+      flex-wrap: wrap;
+      & > * {
+        @include nestedIndent();
+      }
+    }
+    &__users {
+      margin-left: auto;
+      & > * {
+        @include nestedIndent();
+      }
+    }
   }
 </style>
