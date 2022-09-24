@@ -1,5 +1,6 @@
 <script>
     export let className;
+    
 </script>
 
 <button class={className} on:click><slot /></button>

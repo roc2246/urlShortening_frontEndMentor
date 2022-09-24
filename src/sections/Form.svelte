@@ -39,6 +39,6 @@
   <Button className="btn" on:click={() => isURL()}>Shorten It!</Button>
 </form>
 
-{#each shortURLs as url}
-<URL before={url.before} after={url.after}/>
+{#each shortURLs as url, i}
+<URL before={url.before} after={url.after} btnID={i}/>
 {/each}
