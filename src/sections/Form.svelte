@@ -20,8 +20,6 @@
     }
 
     shortURLs = [...shortURLs, urlObject];
-    console.log(urlObject)
-    console.log(shortURLs)
   };
   const isURL = () => {
     const input = document.getElementsByClassName("url--before")[0].value;
@@ -40,3 +38,7 @@
   <input type="text" name="" id="" class="url--before" />
   <Button on:click={() => isURL()}>Shorten It!</Button>
 </form>
+
+{#each shortURLs as url}
+<URL before={url.before} after={url.after}/>
+{/each}
