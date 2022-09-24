@@ -34,6 +34,7 @@
     } else {
       console.log("NO");
     }
+    document.getElementsByClassName("url--before")[0].value="";
   };
 </script>
 
