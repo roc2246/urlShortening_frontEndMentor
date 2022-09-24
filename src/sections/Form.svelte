@@ -6,10 +6,10 @@
 
   const shortener = (url) => {
 
-    const domainRegex = /(?<=:\/\/).*?([^com]+)/g;
-    const pathRegex = /^[^\.]+\.(.+\..+)$/;
-    let newURL = url.match(domainRegex, "reLink");
-    // newURL = url.replace(pathRegex, "1246")
+    const domainRegex = /(?<=www\.)(.*?)(?=\.[a-z])/;
+    const pathRegex = /(?<=\.*\/).*$/;
+    let newURL = url.replace(domainRegex, "reLink");
+    newURL = newURL.replace(pathRegex, "1246")
     newURL = JSON.stringify(newURL);
     newURL = newURL.replace('["', "");
     newURL = newURL.replace('"]', "");

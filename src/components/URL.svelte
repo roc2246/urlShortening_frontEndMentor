@@ -4,9 +4,8 @@
   export let before;
   export let after;
 
-  let innerText = "Copy";
   const copyBtn = document.getElementsByClassName("btn--copy");
-  export  let btnID
+  export let btnID;
 
   const copyURL = (url, btnID) => {
     navigator.clipboard.writeText(url);
@@ -16,8 +15,6 @@
       }
     }
     copyBtn[btnID].innerText = "Copied!";
-    console.log(innerText);
-
   };
 </script>
 
