@@ -21,12 +21,12 @@
 
     shortURLs = [...shortURLs, urlObject];
   };
+
   const isURL = () => {
     const input = document.getElementsByClassName("url--before")[0].value;
     const URLRegex =
       /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
     if (input.match(URLRegex)) {
-      console.log(input);
       shortener(input);
     } else {
       console.log("NO");
@@ -36,7 +36,7 @@
 
 <form class="shortener" action="" on:submit|preventDefault>
   <input type="text" name="" id="" class="url--before" />
-  <Button on:click={() => isURL()}>Shorten It!</Button>
+  <Button className="btn" on:click={() => isURL()}>Shorten It!</Button>
 </form>
 
 {#each shortURLs as url}
