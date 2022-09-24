@@ -5,14 +5,17 @@
   let shortURLs = [];
 
   const shortener = (url) => {
+    const randomnNo = Math.round(Math.random()*1000)
 
     const domainRegex = /(?<=www\.)(.*?)(?=\.[a-z])/;
     const pathRegex = /(?<=\.*\/).*$/;
     let newURL = url.replace(domainRegex, "reLink");
-    newURL = newURL.replace(pathRegex, "1246")
+    newURL = newURL.replace(pathRegex, randomnNo.toString())
     newURL = JSON.stringify(newURL);
-    newURL = newURL.replace('["', "");
-    newURL = newURL.replace('"]', "");
+    newURL = newURL.replace('"', "");
+    newURL = newURL.replace('"', "");
+
+    console.log(newURL)
 
     const urlObject ={
         before: url, 
