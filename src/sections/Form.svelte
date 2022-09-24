@@ -5,6 +5,7 @@
   let shortURLs = [];
 
   const shortener = (url) => {
+
     const domainRegex = /(?<=:\/\/).*?([^com]+)/g;
     const pathRegex = /^[^\.]+\.(.+\..+)$/;
     let newURL = url.match(domainRegex, "reLink");
@@ -12,7 +13,15 @@
     newURL = JSON.stringify(newURL);
     newURL = newURL.replace('["', "");
     newURL = newURL.replace('"]', "");
-    shortURLs = [...shortURLs, newURL];
+
+    const urlObject ={
+        before: url, 
+        after: newURL
+    }
+
+    shortURLs = [...shortURLs, urlObject];
+    console.log(urlObject)
+    console.log(shortURLs)
   };
   const isURL = () => {
     const input = document.getElementsByClassName("url--before")[0].value;
