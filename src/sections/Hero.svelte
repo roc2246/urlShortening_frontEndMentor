@@ -12,7 +12,21 @@
     <Button>Get Started</Button>
   </div>
 
-  <div class="hero__image">
-    <img src="images/illustration-working.svg" alt="" />
-  </div>
+    <img class="hero__image" src="images/illustration-working.svg" alt="" />
 </section>
+
+<style lang="scss">
+  .hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__text-box{
+      display: flex;
+      flex-direction: column;
+    }
+    &__image{
+      max-width: 20rem;
+      height: auto;
+    }
+  }
+</style>

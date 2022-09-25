@@ -3,10 +3,11 @@
 </script>
 
 <nav class={navMode}>
+  <div class="nav__img-box">
+    <img src="images/logo.svg" alt="Shortly Logo" />
+  </div>
   <section class="nav__main">
-    <div class="nav__img-box">
-      <img src="images/logo.svg" alt="Shortly Logo" />
-    </div>
+  
     <a href="blank" class="nav__main--link">Features</a>
     <a href="blank" class="nav__main--link">Pricing</a>
     <a href="blank" class="nav__main--link">Resources</a>
@@ -33,6 +34,7 @@
     &__main {
       @include flexRow();
       flex-wrap: wrap;
+      margin-left: 1rem;
       & > * {
         @include nestedIndent();
       }
