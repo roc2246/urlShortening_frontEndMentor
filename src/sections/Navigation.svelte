@@ -29,6 +29,7 @@
 
   .nav {
     &--desktop {
+      margin-top: 2rem;
       @include flexRow();
     }
     &__main {

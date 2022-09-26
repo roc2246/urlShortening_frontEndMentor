@@ -17,4 +17,9 @@
 </main>
 
 <style>
+  main{
+    max-width: 98rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 </style>
