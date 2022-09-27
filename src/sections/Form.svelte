@@ -53,7 +53,8 @@
   @import "../scss/global";
   .shortener {
     background-image: url("/images/bg-boost-desktop.svg");
-    background-color: $very-dark-violet;
+    background-color: $very-dark-blue;
+    border-radius: .25rem;
     margin-top: 4rem;
     margin-left: 10rem;
     margin-right: 10rem;
@@ -64,6 +65,6 @@
     justify-content: space-between;
   }
   .url--before {
-    width: 90%;
+    width: 80%;
   }
 </style>

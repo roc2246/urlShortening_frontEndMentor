@@ -25,7 +25,7 @@
         &--shorten{
             border-radius: .5rem;
             width: 10rem;
-            padding: 1rem;
+            padding: .5rem;
         }
     }
 
