@@ -23,11 +23,13 @@
 
   .nav {
     &--desktop {
-      margin-top: 2rem;
       display: flex;
       flex-direction: row;
+      margin-top: 2rem;
     }
-
+    &__img-box {
+      margin-right: 1rem;
+    }
     &__main {
       display: flex;
       flex-direction: row;
