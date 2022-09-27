@@ -1,5 +1,5 @@
 <script>
-  import Button from '../components/Button.svelte'
+  import Button from "../components/Button.svelte";
   export let navMode;
 </script>
 
@@ -8,7 +8,6 @@
     <img src="images/logo.svg" alt="Shortly Logo" />
   </div>
   <section class="nav__main">
-  
     <a href="blank" class="nav__main--link">Features</a>
     <a href="blank" class="nav__main--link">Pricing</a>
     <a href="blank" class="nav__main--link">Resources</a>
@@ -20,19 +19,18 @@
 </nav>
 
 <style lang="scss">
-  @import '../scss/global';
-  @mixin flexRow {
-    display: flex;
-    flex-direction: row;
-  }
+  @import "../scss/global";
 
   .nav {
     &--desktop {
       margin-top: 2rem;
-      @include flexRow();
+      display: flex;
+      flex-direction: row;
     }
+
     &__main {
-      @include flexRow();
+      display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       margin-left: 1rem;
       & > * {
@@ -46,7 +44,7 @@
       & > * {
         margin-right: 2rem;
       }
-      & > a{
+      & > a {
         color: $grayish-violet;
         font-weight: $fontweight-heavy;
       }
