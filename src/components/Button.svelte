@@ -11,7 +11,7 @@
         white-space: nowrap;
         background-color: $cyan;
         color: white;
-        font-weight: 700;
+        font-weight: $fontweight-heavy;
         &--CTA{
             border-radius: 2rem;
             width: 10rem;

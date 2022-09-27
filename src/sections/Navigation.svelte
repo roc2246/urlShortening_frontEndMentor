@@ -16,17 +16,14 @@
   <section class="nav__users">
     <a href="blank" class="nav__users--login">Login</a>
     <Button className="btn btn--signup">Sign Up</Button>
-    <!-- <button class="btn nav__users--register">Sign Up</button> -->
   </section>
 </nav>
 
 <style lang="scss">
+  @import '../scss/global';
   @mixin flexRow {
     display: flex;
     flex-direction: row;
-  }
-  @mixin nestedIndent() {
-    margin-right: 2rem;
   }
 
   .nav {
@@ -39,13 +36,19 @@
       flex-wrap: wrap;
       margin-left: 1rem;
       & > * {
-        @include nestedIndent();
+        margin-right: 2rem;
+        color: $grayish-violet;
+        font-weight: $fontweight-heavy;
       }
     }
     &__users {
       margin-left: auto;
       & > * {
-        @include nestedIndent();
+        margin-right: 2rem;
+      }
+      & > a{
+        color: $grayish-violet;
+        font-weight: $fontweight-heavy;
       }
     }
   }
