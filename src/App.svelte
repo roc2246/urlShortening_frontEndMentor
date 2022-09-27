@@ -7,18 +7,18 @@
   import Footer from "./sections/Footer.svelte"
 </script>
 
+<Navigation navMode="nav--desktop" />
 <main>
-  <Navigation navMode="nav--desktop" />
   <Hero />
   <Form />
   <BlurbContainer />
   <CTA />
-  <Footer />
 </main>
+<Footer />
 
 <style>
   main{
-    max-width: 98rem;
+    /* max-width: 98rem; */
     margin-left: auto;
     margin-right: auto;
   }

@@ -11,35 +11,43 @@
     </p>
     <Button className="btn btn--CTA">Get Started</Button>
   </div>
-<div class="hero__image">
-  <img  src="images/illustration-working.svg" alt="" />
-</div>
+  <div class="hero__image">
+    <img src="images/illustration-working.svg" alt="" />
+  </div>
 </section>
 
 <style lang="scss">
-  @import '../scss/global';
-  .heading-primary{
+  @import "../scss/global";
+  .heading-primary {
     margin-bottom: 0;
-    font-size: 6rem;
-}
-  .hero{
+    margin-top: 0;
+    font-size: 4.5rem;
+  }
+  .paragraph-primary {
+    color: $grayish-violet;
+    font-weight: $fontweight-light;
+    width: 25rem;
+  }
+
+  .hero {
+    margin-top: 4rem;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap-reverse;
-    margin-top: 2rem;
     justify-content: space-between;
-    &__text-box{
+    &__text-box {
       display: flex;
       flex-direction: column;
-      max-width: 50rem;
     }
     &__image {
-      // margin-left: 30rem;
-      // overflow-x: hidden;
-      &> img{
-        max-width: 50rem;
-        height: auto;
-      }
+      max-width: 100%;
+      overflow-x: hidden;
     }
   }
+
+@media(max-width: 375px){
+  .hero{
+    flex-wrap: wrap-reverse;
+
+  }
+}
 </style>
