@@ -5,22 +5,22 @@
   let shortURLs = [];
 
   const shortener = (url) => {
-    const randomnNo = Math.round(Math.random()*1000)
+    const randomnNo = Math.round(Math.random() * 1000);
 
     const domainRegex = /(?<=www\.)(.*?)(?=\.[a-z])/;
     const pathRegex = /(?<=\.*\/).*$/;
     let newURL = url.replace(domainRegex, "reLink");
-    newURL = newURL.replace(pathRegex, randomnNo.toString())
+    newURL = newURL.replace(pathRegex, randomnNo.toString());
     newURL = JSON.stringify(newURL);
     newURL = newURL.replace('"', "");
     newURL = newURL.replace('"', "");
 
-    console.log(newURL)
+    console.log(newURL);
 
-    const urlObject ={
-        before: url, 
-        after: newURL
-    }
+    const urlObject = {
+      before: url,
+      after: newURL,
+    };
 
     shortURLs = [...shortURLs, urlObject];
   };
@@ -34,29 +34,34 @@
     } else {
       console.log("NO");
     }
-    document.getElementsByClassName("url--before")[0].value="";
+    document.getElementsByClassName("url--before")[0].value = "";
   };
 </script>
 
 <form class="shortener" on:submit|preventDefault>
   <input type="text" name="" id="" class="url--before" />
-  <Button className="btn btn--shorten" on:click={() => isURL()}>Shorten It!</Button>
+  <Button className="btn btn--shorten" on:click={() => isURL()}
+    >Shorten It!</Button
+  >
 </form>
 
 {#each shortURLs as url, i}
-<URL before={url.before} after={url.after} btnID={i}/>
+  <URL before={url.before} after={url.after} btnID={i} />
 {/each}
 
 <style lang="scss">
-  .shortener{
-    width: 80%;
+  @import "../scss/global";
+  .shortener {
+    background-image: url("/images/bg-boost-desktop.svg");
+    background-color: $very-dark-violet;
+    margin-top: 4rem;
     padding: 2rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .url--before{
+  .url--before {
     width: 90%;
   }
 </style>

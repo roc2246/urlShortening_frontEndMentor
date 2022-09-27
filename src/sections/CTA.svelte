@@ -8,7 +8,14 @@
 </section>
 
 <style lang="scss">
+      @import "../scss/global";
+h2{
+    color: white;
+}   
     .CTA{
+        margin-top: 2rem;
+        background-image: url("/images/bg-boost-desktop.svg");
+    background-color: $very-dark-violet;
         display: flex;
         flex-direction: column;
         align-items: center;

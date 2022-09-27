@@ -30,7 +30,10 @@
 </footer>
 
 <style lang="scss">
+  @import '../scss/global.scss';
   .footer {
+    padding-top: 2rem;
+    background-color: $very-dark-violet;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -40,6 +43,9 @@
     &__links {
       display: flex;
       flex-direction: column;
+      & > *{
+        color: white;
+      }
     }
     .social-media{
         display: flex;
