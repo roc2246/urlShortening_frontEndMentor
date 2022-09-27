@@ -46,4 +46,10 @@
         flex-direction: column;
     }
   }
+
+  @media (max-width: 375px) {
+    .footer{
+      flex-direction: column;
+    }
+  }
 </style>
