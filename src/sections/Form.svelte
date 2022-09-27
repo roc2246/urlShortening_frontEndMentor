@@ -40,7 +40,7 @@
 
 <form class="shortener" on:submit|preventDefault>
   <input type="text" name="" id="" class="url--before" />
-  <Button className="btn" on:click={() => isURL()}>Shorten It!</Button>
+  <Button className="btn btn--shorten" on:click={() => isURL()}>Shorten It!</Button>
 </form>
 
 {#each shortURLs as url, i}

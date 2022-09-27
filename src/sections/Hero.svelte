@@ -9,7 +9,7 @@
       Build your brand's recognition and get detailed insights on how your links
       are performing.
     </p>
-    <Button>Get Started</Button>
+    <Button className="btn btn--CTA">Get Started</Button>
   </div>
 <div class="hero__image">
   <img  src="images/illustration-working.svg" alt="" />
@@ -18,6 +18,10 @@
 
 <style lang="scss">
   @import '../scss/global';
+  .heading-primary{
+    margin-bottom: 0;
+    font-size: 6rem;
+}
   .hero{
     display: flex;
     flex-direction: row;

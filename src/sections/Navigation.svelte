@@ -1,4 +1,5 @@
 <script>
+  import Button from '../components/Button.svelte'
   export let navMode;
 </script>
 
@@ -14,7 +15,8 @@
   </section>
   <section class="nav__users">
     <a href="blank" class="nav__users--login">Login</a>
-    <button class="btn nav__users--register">Sign Up</button>
+    <Button className="btn btn--signup">Sign Up</Button>
+    <!-- <button class="btn nav__users--register">Sign Up</button> -->
   </section>
 </nav>
 

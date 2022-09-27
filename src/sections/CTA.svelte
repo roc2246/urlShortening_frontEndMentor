@@ -4,7 +4,7 @@
 
 <section class="CTA">
     <h2 class="heading-secondary--CTA">Boost your links today</h2>
-    <Button>Get Started</Button>
+    <Button className="btn btn--CTA">Get Started</Button>
 </section>
 
 <style lang="scss">

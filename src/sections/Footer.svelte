@@ -50,6 +50,7 @@
   @media (max-width: 375px) {
     .footer{
       flex-direction: column;
+      align-items: center;
     }
   }
 </style>
