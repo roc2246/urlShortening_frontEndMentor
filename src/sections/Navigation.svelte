@@ -25,7 +25,9 @@
     &--desktop {
       display: flex;
       flex-direction: row;
-      margin-top: 2rem;
+      flex-wrap: wrap;
+      margin-left: 10rem;
+      margin-right: 10rem;
     }
     &__img-box {
       margin-right: 1rem;

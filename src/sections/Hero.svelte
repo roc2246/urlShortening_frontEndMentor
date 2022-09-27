@@ -21,7 +21,7 @@
   .heading-primary {
     margin-bottom: 0;
     margin-top: 0;
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
   .paragraph-primary {
     color: $grayish-violet;
@@ -34,13 +34,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 10rem;
     &__text-box {
       display: flex;
       flex-direction: column;
     }
     &__image {
       max-width: 100%;
-      overflow-x: hidden;
     }
   }
 

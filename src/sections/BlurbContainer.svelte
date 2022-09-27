@@ -39,8 +39,10 @@
 </section>
 
 <style lang="scss">
+  @import '../scss/global.scss';
   .blurb-container {
-    width: 80%;
+    padding-left: 10rem;
+    padding-right: 10rem;
     &__text-box{
       text-align: center;
     }

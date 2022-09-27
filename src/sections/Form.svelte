@@ -55,6 +55,8 @@
     background-image: url("/images/bg-boost-desktop.svg");
     background-color: $very-dark-violet;
     margin-top: 4rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
     padding: 2rem;
     display: flex;
     flex-direction: row;

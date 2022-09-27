@@ -17,3 +17,7 @@ $fontweight-light: 500;
 $default-size: 98rem;
 
 // Mixins
+@mixin center-component {
+    margin-left: 10rem;
+      margin-right: 10rem;
+}

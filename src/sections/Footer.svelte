@@ -33,13 +33,13 @@
   @import '../scss/global.scss';
   .footer {
     padding-top: 2rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
     background-color: $very-dark-violet;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    &__logo {
-      margin-right: 10rem;
-    }
+    justify-content: space-between;
+  
     &__links {
       display: flex;
       flex-direction: column;
