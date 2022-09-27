@@ -21,14 +21,16 @@
   .hero{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap-reverse;
     margin-top: 2rem;
+    justify-content: space-between;
     &__text-box{
       display: flex;
       flex-direction: column;
       max-width: 50rem;
     }
     &__image {
-      margin-left: 10rem;
+      // margin-left: 30rem;
       // overflow-x: hidden;
       &> img{
         max-width: 50rem;

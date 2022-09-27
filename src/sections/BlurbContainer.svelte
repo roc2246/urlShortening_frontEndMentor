@@ -40,9 +40,16 @@
 
 <style lang="scss">
   .blurb-container {
+    width: 80%;
+    &__text-box{
+      text-align: center;
+    }
     &__blurbs {
+      width: 100%;
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
+     flex-wrap: wrap;
       margin-top: 3rem;
     }
   }

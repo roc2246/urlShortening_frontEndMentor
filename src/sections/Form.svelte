@@ -38,7 +38,7 @@
   };
 </script>
 
-<form class="shortener" action="" on:submit|preventDefault>
+<form class="shortener" on:submit|preventDefault>
   <input type="text" name="" id="" class="url--before" />
   <Button className="btn" on:click={() => isURL()}>Shorten It!</Button>
 </form>
@@ -46,3 +46,17 @@
 {#each shortURLs as url, i}
 <URL before={url.before} after={url.after} btnID={i}/>
 {/each}
+
+<style lang="scss">
+  .shortener{
+    width: 80%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .url--before{
+    width: 90%;
+  }
+</style>
