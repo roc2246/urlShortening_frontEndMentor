@@ -41,8 +41,12 @@
 <style lang="scss">
   @import '../scss/global.scss';
   .blurb-container {
+    z-index: -1;
+    background-color: $gray;
     padding-left: 10rem;
     padding-right: 10rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     &__text-box{
       text-align: center;
     }

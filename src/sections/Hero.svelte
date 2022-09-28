@@ -31,6 +31,7 @@
 
   .hero {
     margin-top: 4rem;
+    margin-bottom: 4rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -38,12 +38,15 @@
   };
 </script>
 
-<form class="shortener" on:submit|preventDefault>
+<section class="shortener-container">
+  <form class="shortener" on:submit|preventDefault>
   <input type="text" name="" id="" class="url--before" />
   <Button className="btn btn--shorten" on:click={() => isURL()}
     >Shorten It!</Button
   >
 </form>
+</section>
+
 
 {#each shortURLs as url, i}
   <URL before={url.before} after={url.after} btnID={i} />
@@ -51,11 +54,14 @@
 
 <style lang="scss">
   @import "../scss/global";
+  .shortener-container{
+    // padding-top: 4rem;
+    background: linear-gradient(to bottom,  white 50%,$gray 50%,);
+  }
   .shortener {
     background-image: url("/images/bg-boost-desktop.svg");
     background-color: $very-dark-blue;
     border-radius: .25rem;
-    margin-top: 4rem;
     margin-left: 10rem;
     margin-right: 10rem;
     padding: 2rem;
