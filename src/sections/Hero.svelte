@@ -11,9 +11,7 @@
     </p>
     <Button className="btn btn--CTA">Get Started</Button>
   </div>
-  <div class="hero__image">
-    <img src="images/illustration-working.svg" alt="" />
-  </div>
+    <img class="hero__image" src="images/illustration-working.svg" alt="" />
 </section>
 
 <style lang="scss">
@@ -32,23 +30,22 @@
   .hero {
     margin-top: 4rem;
     margin-bottom: 4rem;
+    margin-left: 8rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-left: 10rem;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+
     &__text-box {
       display: flex;
       flex-direction: column;
+      max-width: 28rem;
+     
     }
     &__image {
       max-width: 100%;
+      height: auto;
     }
   }
 
-@media(max-width: 375px){
-  .hero{
-    flex-wrap: wrap-reverse;
-
-  }
-}
 </style>

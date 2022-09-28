@@ -39,15 +39,14 @@
 </section>
 
 <style lang="scss">
-  @import '../scss/global.scss';
+  @import "../scss/global.scss";
   .blurb-container {
-    z-index: -1;
     background-color: $gray;
-    padding-left: 10rem;
-    padding-right: 10rem;
     padding-bottom: 2rem;
     padding-top: 2rem;
-    &__text-box{
+    padding-left: 10rem;
+    padding-right: 10rem;
+    &__text-box {
       text-align: center;
     }
     &__blurbs {
@@ -55,7 +54,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-     flex-wrap: wrap;
+      flex-wrap: wrap;
       margin-top: 3rem;
     }
   }

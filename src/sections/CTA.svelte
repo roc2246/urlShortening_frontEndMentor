@@ -11,6 +11,7 @@
       @import "../scss/global";
 h2{
     color: white;
+    white-space: nowrap;
 }   
     .CTA{
         background-image: url("/images/bg-boost-desktop.svg");
@@ -18,5 +19,7 @@ h2{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-left: 10rem;
+        padding-right: 10rem;
     }
 </style>

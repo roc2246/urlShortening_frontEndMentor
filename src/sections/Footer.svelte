@@ -33,8 +33,8 @@
   @import '../scss/global.scss';
   .footer {
     padding-top: 2rem;
-    padding-left: 10rem;
-    padding-right: 10rem;
+   padding-left: 10rem;
+   padding-right: 10rem;
     background-color: $very-dark-violet;
     display: flex;
     flex-direction: row;

@@ -56,14 +56,16 @@
   @import "../scss/global";
   .shortener-container{
     // padding-top: 4rem;
+    // padding-left: 10rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
     background: linear-gradient(to bottom,  white 50%,$gray 50%,);
   }
   .shortener {
     background-image: url("/images/bg-boost-desktop.svg");
     background-color: $very-dark-blue;
     border-radius: .25rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
+
     padding: 2rem;
     display: flex;
     flex-direction: row;
@@ -71,6 +73,6 @@
     justify-content: space-between;
   }
   .url--before {
-    width: 80%;
+    width: 75%;
   }
 </style>
