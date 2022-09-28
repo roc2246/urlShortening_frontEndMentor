@@ -24,7 +24,7 @@
   .paragraph-primary {
     color: $grayish-violet;
     font-weight: $fontweight-light;
-    width: 25rem;
+    // width: 25rem;
   }
 
   .hero {
@@ -40,6 +40,7 @@
       display: flex;
       flex-direction: column;
       max-width: 28rem;
+      width: 100%;
      
     }
     &__image {

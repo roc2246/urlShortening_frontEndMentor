@@ -55,17 +55,15 @@
 <style lang="scss">
   @import "../scss/global";
   .shortener-container{
-    // padding-top: 4rem;
-    // padding-left: 10rem;
-    padding-right: 10rem;
-    padding-left: 10rem;
     background: linear-gradient(to bottom,  white 50%,$gray 50%,);
   }
   .shortener {
+    margin-right: min(10rem, 10%);
+    margin-left: min(10rem, 10%);
     background-image: url("/images/bg-boost-desktop.svg");
     background-color: $very-dark-blue;
     border-radius: .25rem;
-
+// min-width: 20rem;
     padding: 2rem;
     display: flex;
     flex-direction: row;
