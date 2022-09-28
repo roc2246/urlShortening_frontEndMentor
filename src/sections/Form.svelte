@@ -58,8 +58,8 @@
     background: linear-gradient(to bottom,  white 50%,$gray 50%,);
   }
   .shortener {
-    margin-right: min(10rem, 10%);
-    margin-left: min(10rem, 10%);
+    margin-right: min(10rem, 5%);
+    margin-left: min(10rem, 5%);
     background-image: url("/images/bg-boost-desktop.svg");
     background-color: $very-dark-blue;
     border-radius: .25rem;

@@ -26,8 +26,8 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-left: 10rem;
-      margin-right: 10rem;
+      margin-left: min(10rem, 5%);
+      margin-right: min(10rem, 5%);
     }
     &__img-box {
       margin-right: 1rem;
