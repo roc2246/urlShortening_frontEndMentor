@@ -38,11 +38,17 @@
     background-color: $very-dark-violet;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__logo{
+      margin-right: auto;
+    }
   
     &__links {
       display: flex;
       flex-direction: column;
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
       & > *{
         color: white;
       }
