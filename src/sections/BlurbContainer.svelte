@@ -44,8 +44,8 @@
     background-color: $gray;
     padding-bottom: 2rem;
     padding-top: 2rem;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: min(10rem, 5%);
+      padding-right: min(10rem, 5%);
     &__text-box {
       text-align: center;
     }

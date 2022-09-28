@@ -30,11 +30,12 @@
   .hero {
     margin-top: 4rem;
     margin-bottom: 4rem;
-    margin-left: 8rem;
+    margin-left: min(10rem, 5%);
+      margin-right: min(10rem, 5%);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap-reverse;
-    justify-content: center;
+    justify-content: space-between;
 
     &__text-box {
       display: flex;
