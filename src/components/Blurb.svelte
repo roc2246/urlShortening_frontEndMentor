@@ -13,6 +13,7 @@
 </div>
 
 <style lang="scss">
+  @import '../scss/global';
   .blurb {
     border: solid;
     border-radius: 0.5rem;
@@ -21,7 +22,10 @@
     padding: 1rem;
     &__img-box {
       position: absolute;
-      margin-top: -3rem;
+      margin-top: -3.5rem;
+      border-radius: 50%;
+      padding: .75rem;
+      background-color: $dark-violet;
     }
     &:nth-child(2) {
       margin-top: 2rem;
