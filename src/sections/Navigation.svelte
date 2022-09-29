@@ -73,7 +73,7 @@
         margin-right: 2rem;
       }
       & > a {
-        color: $grayish-violet;
+        color: white;
         font-weight: $fontweight-heavy;
       }
     }
