@@ -44,7 +44,7 @@
     background-color: $cyan;
     height: 1rem;
     width: 80%;
-
+border-style: none;
     margin-top: 8rem;
 
   }
