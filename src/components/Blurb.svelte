@@ -17,9 +17,8 @@
   @import '../scss/global';
   .blurb {
     position: relative;
-    background-color: $gray;
+    background-color: white;
     z-index: 1;
-    border: solid;
     border-radius: 0.5rem;
     width: 16rem;
     height: 12rem;
