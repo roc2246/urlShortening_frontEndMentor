@@ -43,13 +43,14 @@
     justify-content: center;
     &__logo{
       margin-right: auto;
+      margin-top: 1rem;
     }
   
     &__links {
       display: flex;
       flex-direction: column;
-      margin-left: 2.5rem;
-      margin-right: 2.5rem;
+      margin-left: 4rem;
+      margin-right: 4rem;
       & > *{
         color: white;
       }
@@ -57,6 +58,9 @@
     .social-media{
         display: flex;
         flex-direction: row;
+        margin-top: 2rem;
+      margin-left: 4rem;
+
         & > *{
           margin-left: .5rem;
           margin-right: .5rem;
@@ -69,6 +73,16 @@
     .footer{
       flex-direction: column;
       align-items: center;
+      &__logo{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &__links {
+      text-align: center;
+    }
+    .social-media{
+      margin-left: 0;
+    }
     }
   }
 </style>
