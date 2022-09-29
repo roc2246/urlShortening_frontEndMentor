@@ -33,6 +33,7 @@
   @import '../scss/global.scss';
   .footer {
     padding-top: 2rem;
+    padding-bottom: 2rem;
     padding-left: min(10rem, 5%);
       padding-right: min(10rem, 5%);
     background-color: $very-dark-violet;
