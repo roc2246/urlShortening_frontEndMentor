@@ -24,7 +24,6 @@
   .paragraph-primary {
     color: $grayish-violet;
     font-weight: $fontweight-light;
-    // width: 25rem;
   }
 
   .hero {
