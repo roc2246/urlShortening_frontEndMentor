@@ -43,16 +43,17 @@
 
 <section class="shortener-container">
   <form class="shortener" on:submit|preventDefault>
-  <input type="text" placeholder="Shorten a link here..." class="url--before" />
- {#if displayError === true}
- <p class="shortener__error-message shortener__error-message--mobile">Please <i>add</i> a link</p>
- {/if}
+  <div class="insert-url">
+    <input type="text" placeholder="Shorten a link here..." class="url--before" />
+    {#if displayError === true}
+    <p class="shortener__error-message">Please <i>add</i> a link</p>
+    {/if}
+  </div>
+  
   <Button className="btn btn--shorten" on:click={() => isURL()}
     >Shorten It!</Button
   >
-  {#if displayError === true}
-<p class="shortener__error-message shortener__error-message--desktop">Please <i>add</i> a link</p>
-{/if}
+
 </form>
 
 </section>
@@ -80,16 +81,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    .insert-url{
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+    }
     &__error-message{
       margin-top: 0;
       color: $red;
-      &--mobile{
-        display: none;
-      }
     }
-  }
-  .url--before {
-    width: 75%;
   }
   .url-container{
     background-color: $gray;
@@ -98,15 +98,7 @@
   }
   @media (max-width: 375px){
     .shortener{
-      &__error-message{
-        &--desktop{
-          display: none;
-        }
-      &--mobile{
-        display: inline;
-      }
-    }
-    .url--before {
+    .insert-url {
     width: 100%;
   }
 }
