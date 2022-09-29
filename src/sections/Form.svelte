@@ -6,31 +6,53 @@
 
   let shortURLs = [];
 
-  const shortener = (url) => {
-    const randomnNo = Math.round(Math.random() * 1000);
-    const domainRegex = /[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}/igm;
-    const pathRegex = /\.[a-zA-Z][a-zA-Z][a-zA-Z]?\/.*/g;
-    let newURL;
+  const shortener = async (url) => {
+    // NON API SOLUTION
 
-    if (url.match(pathRegex)){
-      newURL = url.replace(pathRegex, "/" + randomnNo.toString());
-    newURL = newURL.replace(domainRegex, "reLink");
+    // const randomnNo = Math.round(Math.random() * 1000);
+    // const domainRegex = /[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}/igm;
+    // const pathRegex = /\.[a-zA-Z][a-zA-Z][a-zA-Z]?\/.*/g;
+    // let newURL;
 
-    } else{
-      newURL = url.replace(domainRegex, "reLink");
+    // if (url.match(pathRegex)){
+    //   newURL = url.replace(pathRegex, "/" + randomnNo.toString());
+    // newURL = newURL.replace(domainRegex, "reLink");
 
-    } 
+    // } else{
+    //   newURL = url.replace(domainRegex, "reLink");
 
-    newURL = JSON.stringify(newURL);
-    newURL = newURL.replace('"', "");
-    newURL = newURL.replace('"', "");
+    // }
 
-    const urlObject = {
-      before: url,
-      after: newURL,
-    };
+    // newURL = JSON.stringify(newURL);
+    // newURL = newURL.replace('"', "");
+    // newURL = newURL.replace('"', "");
 
-    shortURLs = [...shortURLs, urlObject];
+    // const urlObject = {
+    //   before: url,
+    //   after: newURL,
+    // };
+
+    // shortURLs = [...shortURLs, urlObject];
+
+    ////////////////////////////////////////////////////////
+
+    // API SOLUTION
+
+    fetch(`https://api.shrtco.de/v2/shorten?url=${url}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.result);
+        const domainRegex = /[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}/gim;
+        let newURL = data.result.full_short_link
+        newURL = newURL.replace(domainRegex, "reLink");
+
+        const urlObject = {
+          before: url,
+          after: newURL,
+        };
+
+        shortURLs = [...shortURLs, urlObject];
+      });
   };
 
   const isURL = () => {
@@ -111,7 +133,6 @@
   @media (max-width: 1090px) {
     .shortener {
       height: auto;
-
     }
   }
   @media (max-width: 375px) {
