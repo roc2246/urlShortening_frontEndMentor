@@ -18,10 +18,10 @@
 
 <nav class="nav">
   <section class="nav__img-box">
-    <img src="images/logo.svg" alt="Shortly Logo" />
+    <img src="images/logo-top.svg" alt="Shortly Logo" />
   </section>
   <section class="nav__mobile-toggle" on:click={()=> mobileToggle()}>
-    <img src="images/icon-brand-recognition.svg" alt="Toggle">
+    <img src="images/icon-menu.svg" alt="Toggle">
   </section>
   <section class="nav__main">
     <a href="blank" class="nav__main--link">Features</a>

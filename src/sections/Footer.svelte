@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="footer__logo">
-    <img src="images/logo.svg" alt="logo" />
+    <img src="images/logo-bottom.svg" alt="logo" />
   </div>
   <div class="footer__links">
     <h6>Features</h6>

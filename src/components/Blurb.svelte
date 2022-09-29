@@ -11,10 +11,10 @@
   <h1 class="heading-tertiary">{heading}</h1>
   <p class="paragraph-tertiary">{paragraph}</p>
 </div>
-<hr class="blurb-divider">
+<hr class="blurb-divider" />
 
 <style lang="scss">
-  @import '../scss/global';
+  @import "../scss/global";
   .blurb {
     position: relative;
     background-color: white;
@@ -27,7 +27,12 @@
       position: absolute;
       margin-top: -3.5rem;
       border-radius: 50%;
-      padding: .75rem;
+      width: 2rem;
+      height: auto;
+      padding-left: .8rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       background-color: $dark-violet;
     }
     &:nth-child(3) {
@@ -35,31 +40,39 @@
     }
     &:nth-child(5) {
       margin-top: 4rem;
+      &> .blurb__img-box{
+        padding-right: 1.5rem;
+
+      }
     }
   }
-  .blurb-divider{
+  .blurb-divider {
     position: absolute;
     z-index: 0;
     background-color: $cyan;
     height: 1rem;
     width: 80%;
-border-style: none;
+    border-style: none;
     margin-top: 8rem;
-
   }
- 
+
   @media (max-width: 733px) {
     .blurb-divider {
       height: 30rem;
-    width: 1rem;
+      width: 1rem;
 
-    margin-left: 8rem;
+      // margin-left: auto;
+      // margin-right: auto;
     }
-
-    .blurb{
-      &:nth-child(3){
-      margin-top: 3.5rem;
-
+    .blurb {
+      &__img-box {
+        left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+      }
+      &:nth-child(3) {
+        margin-top: 3.5rem;
       }
     }
   }

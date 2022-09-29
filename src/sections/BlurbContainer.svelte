@@ -58,4 +58,12 @@
       margin-top: 3rem;
     }
   }
+  @media (max-width:733px){
+    .blurb-container{
+      &__blurbs{
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
 </style>
