@@ -28,6 +28,9 @@
             width: 10rem;
             padding: .5rem;
         }
+        &:hover{
+            background-color: $gray;
+        }
     }
 
     @media (max-width: 375px){

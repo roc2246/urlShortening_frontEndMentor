@@ -49,6 +49,7 @@
     }
     &--before {
       font-weight: $fontweight-light;
+      margin-top: .5rem;
     }
     &__break {
       display: none;
@@ -59,6 +60,7 @@
       font-weight: $fontweight-light;
       margin-left: auto;
       margin-right: 1rem;
+      margin-top: .5rem;
     }
   }
 
