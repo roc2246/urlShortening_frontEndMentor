@@ -49,4 +49,19 @@
     }
   }
 
+  @media (max-width: 375px) {
+    .heading-primary {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 3rem;
+  }
+  .hero{
+    &__text-box{
+      text-align: center;
+      align-items: center;
+    }
+   
+  }
+  }
+
 </style>
