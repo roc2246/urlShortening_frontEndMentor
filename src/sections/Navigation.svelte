@@ -67,7 +67,7 @@
       &--break{
         display: none;
         width: 15rem;
-        margin-left: 2rem;
+        margin-left: 0rem;
       }
       & > * {
         margin-right: 2rem;
@@ -87,7 +87,7 @@
       }
       &__main, &__users{
         position: absolute;
-        display: none;
+        display: flex;
         flex-direction: column;
         margin: 0;
         left: 5%;
@@ -98,6 +98,7 @@
           color: white;
           margin-top: .25rem;
           margin-bottom: .25rem;
+          margin-right: 0;
         }
       }
       &__main {
