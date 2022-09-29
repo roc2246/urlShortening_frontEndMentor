@@ -22,9 +22,66 @@
 </script>
 
 <div class="shortened-url" transition:fly={{easing: cubicIn, x: 0, y:300}}>
-  <span class="shortened-url--before">{before}</span>
-  <span class="shortened-url--after">{after}</span>
+  <div class="shortened-url__container">
+     <span class="shortened-url--before">{before}</span>
+ <hr class="shortened-url__break">
+     <span class="shortened-url--after">{after}</span>
   <Button className="btn btn--copy" on:click={() => copyURL(after, btnID)}
     >Copy</Button
   >
+  </div>
+ 
 </div>
+
+<style lang="scss">
+  @import '../scss/global';
+  .shortened-url{
+    background-color: $gray;
+    margin-top: 1rem;
+    &__container{
+      display: flex;
+      flex-direction: row;
+      border-radius: .75rem;
+      padding: 1rem;
+      background-color: white;
+      margin-right: min(10rem, 5%);
+    margin-left: min(10rem, 5%);
+    }
+    &--before{
+    font-weight: $fontweight-light;
+    }
+    &__break{
+      display: none;
+      width: 100%;
+    }
+   &--after{
+    color:$cyan;
+    font-weight: $fontweight-light;
+    margin-left: auto;
+    margin-right: 1rem;
+   }
+  }
+
+  @media (max-width: 375px) {
+    .shortened-url{
+      &__container{
+        flex-direction: column;
+      }
+      &--before{
+        margin-right: auto;
+
+    }
+    &__break{
+      display: block;
+    }
+      &--after{
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 1rem;
+   }
+      & >* {
+        text-align: center;
+      }
+    }
+  }
+</style>

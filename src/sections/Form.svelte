@@ -47,10 +47,12 @@
 </form>
 </section>
 
-
-{#each shortURLs as url, i}
+<section class="url-container">
+ {#each shortURLs as url, i}
   <URL before={url.before} after={url.after} btnID={i} />
-{/each}
+{/each} 
+</section>
+
 
 <style lang="scss">
   @import "../scss/global";
@@ -71,6 +73,11 @@
   }
   .url--before {
     width: 75%;
+  }
+  .url-container{
+    background-color: $gray;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   @media (max-width: 375px){
     .url--before {
