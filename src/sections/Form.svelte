@@ -8,7 +8,7 @@
 
   const shortener = (url) => {
     const randomnNo = Math.round(Math.random() * 1000);
-    const domainRegex = /[a-zA-Z0-9\-\.]+\.[a-zA-Z][a-zA-Z][a-zA-Z]?/igm;
+    const domainRegex = /[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}/igm;
     const pathRegex = /\.[a-zA-Z][a-zA-Z][a-zA-Z]?\/.*/g;
     let newURL;
 
