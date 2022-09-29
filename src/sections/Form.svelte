@@ -6,7 +6,7 @@
 
   let shortURLs = [];
 
-  const shortener = async (url) => {
+  const shortener = (url) => {
     // NON API SOLUTION
 
     // const randomnNo = Math.round(Math.random() * 1000);
