@@ -55,5 +55,12 @@ border-style: none;
 
     margin-left: 8rem;
     }
+
+    .blurb{
+      &:nth-child(3){
+      margin-top: 3.5rem;
+
+      }
+    }
   }
 </style>
