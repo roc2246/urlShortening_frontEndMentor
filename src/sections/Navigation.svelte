@@ -29,6 +29,7 @@
     <a href="blank" class="nav__main--link">Resources</a>
   </section>
   <section class="nav__users">
+    <hr class="nav__users--break">
     <a href="blank" class="nav__users--login">Login</a>
     <Button className="btn btn--signup">Sign Up</Button>
   </section>
@@ -48,6 +49,7 @@
     }
     &__mobile-toggle{
       display: none;
+      cursor: pointer;
     }
     &__main {
       display: flex;
@@ -62,6 +64,11 @@
     }
     &__users {
       margin-left: auto;
+      &--break{
+        display: none;
+        width: 15rem;
+        margin-left: 2rem;
+      }
       & > * {
         margin-right: 2rem;
       }
@@ -79,7 +86,37 @@
         display: inline-block;
       }
       &__main, &__users{
+        position: absolute;
         display: none;
+        flex-direction: column;
+        margin: 0;
+        left: 5%;
+        right: 5%;
+        width: auto;
+        background-color: $dark-violet;
+        & > *{
+          color: white;
+          margin-top: .25rem;
+          margin-bottom: .25rem;
+        }
+      }
+      &__main {
+        top: 10vh;
+        height: 8rem;
+        text-align: center;
+        padding-top: 1rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+      &__users{
+        top: 25vh;
+        padding-bottom: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      align-items: center;
+      &--break{
+        display: block;
+      }
       }
     }
   }
