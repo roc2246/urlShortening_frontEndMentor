@@ -41,7 +41,6 @@
     fetch(`https://api.shrtco.de/v2/shorten?url=${url}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.result);
         const domainRegex = /[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}/gim;
         let newURL = data.result.full_short_link
         newURL = newURL.replace(domainRegex, "reLink");

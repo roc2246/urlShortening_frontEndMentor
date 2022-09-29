@@ -48,14 +48,18 @@
       margin-left: min(10rem, 5%);
     }
     &--before {
+       word-break: break-all;
       font-weight: $fontweight-light;
       margin-top: .5rem;
+      margin-right: 1rem;
+
     }
     &__break {
       display: none;
       width: 100%;
     }
     &--after {
+       word-break: break-all;
       color: $cyan;
       font-weight: $fontweight-light;
       margin-left: auto;
