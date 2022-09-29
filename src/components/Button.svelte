@@ -12,6 +12,7 @@
         background-color: $cyan;
         color: white;
         font-weight: $fontweight-heavy;
+       cursor: pointer;
         &--CTA{
             border-radius: 2rem;
             width: 10rem;
