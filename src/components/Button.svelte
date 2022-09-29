@@ -35,6 +35,11 @@
                 margin-right: 1.5rem;
                 margin-top: 1rem;
             }
+            &--shorten{
+            border-radius: .5rem;
+            width: 100%;
+            padding: .5rem;
+        }
         }
     }
 

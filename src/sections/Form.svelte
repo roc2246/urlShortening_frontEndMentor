@@ -63,7 +63,6 @@
     background-image: url("/images/bg-boost-desktop.svg");
     background-color: $very-dark-blue;
     border-radius: .25rem;
-// min-width: 20rem;
     padding: 2rem;
     display: flex;
     flex-direction: row;
@@ -73,4 +72,9 @@
   .url--before {
     width: 75%;
   }
+  @media (max-width: 375px){
+    .url--before {
+    width: 100%;
+  }
+}
 </style>
