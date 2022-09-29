@@ -2,6 +2,8 @@
   import Button from "../components/Button.svelte";
   import URL from "../components/URL.svelte";
 
+  let displayError = false
+
   let shortURLs = [];
 
   const shortener = (url) => {
@@ -26,25 +28,35 @@
   };
 
   const isURL = () => {
-    const input = document.getElementsByClassName("url--before")[0].value;
+    const inputBox = document.getElementsByClassName("url--before")[0];
+    const input = inputBox.value;
     const URLRegex =
       /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
     if (input.match(URLRegex)) {
       shortener(input);
+      displayError = false
     } else {
-      console.log("NO");
+      inputBox.style.borderColor = "hsl(0, 87%, 67%)";
+      displayError = true
     }
-    document.getElementsByClassName("url--before")[0].value = "";
+    inputBox.value = "";
   };
 </script>
 
 <section class="shortener-container">
   <form class="shortener" on:submit|preventDefault>
-  <input type="text" name="" id="" class="url--before" />
+  <input type="text" placeholder="Shorten a link here..." class="url--before" />
+ {#if displayError === true}
+ <p class="shortener__error-message shortener__error-message--mobile">Please <i>add</i> a link</p>
+ {/if}
   <Button className="btn btn--shorten" on:click={() => isURL()}
     >Shorten It!</Button
   >
+  {#if displayError === true}
+<p class="shortener__error-message shortener__error-message--desktop">Please <i>add</i> a link</p>
+{/if}
 </form>
+
 </section>
 
 <section class="url-container">
@@ -70,6 +82,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    &__error-message{
+      margin-top: 0;
+      color: $red;
+      &--mobile{
+        display: none;
+      }
+    }
   }
   .url--before {
     width: 75%;
@@ -80,8 +99,18 @@
     padding-bottom: 1rem;
   }
   @media (max-width: 375px){
+    .shortener{
+      &__error-message{
+        &--desktop{
+          display: none;
+        }
+      &--mobile{
+        display: inline;
+      }
+    }
     .url--before {
     width: 100%;
   }
 }
+  }
 </style>
