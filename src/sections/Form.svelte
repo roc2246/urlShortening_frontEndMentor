@@ -100,6 +100,12 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+  @media (max-width: 1090px) {
+    .shortener {
+      height: auto;
+
+    }
+  }
   @media (max-width: 375px) {
     .shortener {
       height: auto;
