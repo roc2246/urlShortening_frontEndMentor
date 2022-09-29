@@ -17,8 +17,6 @@
     newURL = newURL.replace('"', "");
     newURL = newURL.replace('"', "");
 
-    console.log(newURL);
-
     const urlObject = {
       before: url,
       after: newURL,
