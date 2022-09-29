@@ -43,13 +43,13 @@
     z-index: 0;
     background-color: $cyan;
     height: 1rem;
-    width: 60rem;
+    width: 80%;
 
     margin-top: 8rem;
 
   }
-
-  @media (max-width: 375px) {
+ 
+  @media (max-width: 733px) {
     .blurb-divider {
       height: 30rem;
     width: 1rem;
