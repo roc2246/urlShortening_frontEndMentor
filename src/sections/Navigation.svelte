@@ -1,12 +1,28 @@
 <script>
   import Button from "../components/Button.svelte";
-  export let navMode;
+
+  const mobileToggle = () => {
+    const mainNav = document.getElementsByClassName("nav__main")[0]
+    const userNav = document.getElementsByClassName("nav__users")[0]
+    const isempty = mainNav.style.display === "" && userNav.style.display === ""
+
+    if(isempty){
+      mainNav.style.display = "flex"
+      userNav.style.display = "flex"
+    } else {
+      mainNav.style.display = ""
+      userNav.style.display = ""
+    }
+  }
 </script>
 
-<nav class={navMode}>
-  <div class="nav__img-box">
+<nav class="nav">
+  <section class="nav__img-box">
     <img src="images/logo.svg" alt="Shortly Logo" />
-  </div>
+  </section>
+  <section class="nav__mobile-toggle" on:click={()=> mobileToggle()}>
+    <img src="images/icon-brand-recognition.svg" alt="Toggle">
+  </section>
   <section class="nav__main">
     <a href="blank" class="nav__main--link">Features</a>
     <a href="blank" class="nav__main--link">Pricing</a>
@@ -22,15 +38,16 @@
   @import "../scss/global";
 
   .nav {
-    &--desktop {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       margin-left: min(10rem, 5%);
       margin-right: min(10rem, 5%);
-    }
     &__img-box {
       margin-right: 1rem;
+    }
+    &__mobile-toggle{
+      display: none;
     }
     &__main {
       display: flex;
@@ -51,6 +68,18 @@
       & > a {
         color: $grayish-violet;
         font-weight: $fontweight-heavy;
+      }
+    }
+  }
+
+  @media (max-width: 375px){
+    .nav{
+      justify-content: space-between;
+      &__mobile-toggle{
+        display: inline-block;
+      }
+      &__main, &__users{
+        display: none;
       }
     }
   }

@@ -7,7 +7,7 @@
   import Footer from "./sections/Footer.svelte"
 </script>
 
-<Navigation navMode="nav--desktop" />
+<Navigation />
 <main>
   <Hero />
   <Form />
