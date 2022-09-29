@@ -33,6 +33,7 @@
     @media (max-width: 375px){
         .btn{
             &--signup{
+                margin-left: .25rem;
                 margin-top: 1rem;
             }
             &--shorten{

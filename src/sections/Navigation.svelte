@@ -87,7 +87,7 @@
       }
       &__main, &__users{
         position: absolute;
-        display: flex;
+        display: none;
         flex-direction: column;
         margin: 0;
         left: 5%;
