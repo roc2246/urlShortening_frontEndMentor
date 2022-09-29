@@ -73,7 +73,7 @@
         margin-right: 2rem;
       }
       & > a {
-        color: white;
+        color: $grayish-violet;
         font-weight: $fontweight-heavy;
       }
     }
@@ -117,6 +117,10 @@
       align-items: center;
       &--break{
         display: block;
+      }
+      & > a {
+        color: white;
+        font-weight: $fontweight-heavy;
       }
       }
     }
