@@ -49,7 +49,7 @@
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: $mobile) {
     .heading-primary {
     margin-bottom: 0;
     margin-top: 0;

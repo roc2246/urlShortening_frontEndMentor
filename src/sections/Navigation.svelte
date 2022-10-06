@@ -79,7 +79,7 @@
     }
   }
 
-  @media (max-width: 375px){
+  @media (max-width: $mobile){
     .nav{
       justify-content: space-between;
       &__mobile-toggle{

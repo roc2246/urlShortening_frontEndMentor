@@ -68,7 +68,7 @@
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: $mobile) {
     .shortened-url {
       &__container {
         flex-direction: column;

@@ -33,7 +33,7 @@
         }
     }
 
-    @media (max-width: 375px){
+    @media (max-width: $mobile){
         .btn{
             &--signup{
                 margin-left: .25rem;

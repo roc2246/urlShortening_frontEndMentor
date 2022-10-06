@@ -134,7 +134,7 @@
       height: auto;
     }
   }
-  @media (max-width: 375px) {
+  @media (max-width: $mobile) {
     .shortener {
       height: auto;
       .insert-url {

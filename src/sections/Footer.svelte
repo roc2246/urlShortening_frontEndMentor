@@ -69,7 +69,7 @@
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: $mobile) {
     .footer{
       flex-direction: column;
       align-items: center;
